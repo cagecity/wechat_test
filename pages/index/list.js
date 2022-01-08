@@ -1,0 +1,1 @@
+wx.navigateTo({ url: 'pages/index/detail?id=1&other=abc' })
