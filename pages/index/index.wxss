@@ -1,8 +1,16 @@
 #matrix {
+  width: 300px;
+  border:1px solid black !important;
   display:flex;
-  width: 600rpx;
+  flex-wrap:wrap;
 }
 .grid {
-  width: 300rpx;
-  background-color: red;
+  width: 60px !important;
+  height:60px !important;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  border:1px solid black !important;
+  border-radius:0 !important;
+  background-color: #faf8f6;
 }
