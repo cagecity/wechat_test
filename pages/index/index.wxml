@@ -1,29 +1,5 @@
 <view style="display:flex; justify-content:center">
     <view id="matrix">
-        <button class="grid">1</button>
-        <button class="grid">2</button>
-        <button class="grid">3</button>
-        <button class="grid">4</button>
-        <button class="grid">5</button>
-        <button class="grid">6</button>
-        <button class="grid">7</button>
-        <button class="grid">8</button>
-        <button class="grid">9</button>
-        <button class="grid">10</button>
-        <button class="grid">11</button>
-        <button class="grid">12</button>
-        <button class="grid">13</button>
-        <button class="grid">14</button>
-        <button class="grid">15</button>
-        <button class="grid">16</button>
-        <button class="grid">17</button>
-        <button class="grid">18</button>
-        <button class="grid">19</button>
-        <button class="grid">20</button>
-        <button class="grid">21</button>
-        <button class="grid">22</button>
-        <button class="grid">23</button>
-        <button class="grid">24</button>
-        <button class="grid">25</button>
+        <button class="grid {{taped}}" wx:for="{{buttons}}" wx:for-item="itm" bind:tap="matrixTap">{{itm}}</button>
     </view>
 </view>

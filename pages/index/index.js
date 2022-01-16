@@ -1,22 +1,12 @@
 Page({
-
-  data: { loading: false },
-
-  tap: function() {
-
-    // 把按钮的loading状态显示出来
-
+  data:{
+    buttons: Array.from({length:25},(item, index) => index+1),
+    taped : ""
+  },
+  matrixTap:function(event) {
     this.setData({
-
-      loading: true
-
+      taped : "buttonTaped"
     })
-
-    var thisApp = getApp()
-    console.log(thisApp.globalData.sessionId)
-
-    // 接着做耗时的操作
-
+    console.log(event.currentTarget)
   }
-
 })

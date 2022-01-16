@@ -1,16 +1,20 @@
 #matrix {
-  width: 300px;
+  width: 95vw;
   border:1px solid black !important;
   display:flex;
   flex-wrap:wrap;
 }
 .grid {
-  width: 60px !important;
-  height:60px !important;
+  width: 19vw !important;
+  height: 19vw !important;
   margin: 0;
   padding: 0;
-  line-height: 60px;
+  line-height: 19vw;
   border:1px solid black !important;
   border-radius:0 !important;
   background-color: #faf8f6;
+}
+
+.buttonTaped {
+background-color: red;
 }
