@@ -1,12 +1,41 @@
+const app = getApp();
 Page({
-  data:{
-    buttons: Array.from({length:25},(v, i) => i+1),
-    taped : ""
+  data: {
+    matrix: app.newMatrix(25),
+    curNumber: 0,
+    startTime: Date.now(),
+    timePassed: "0秒",
+    win: false
   },
-  matrixTap:function(event) {
+  gridTap: function (e) {
+    var m2 = this.data.matrix;
+    var tapId = e.target.id;
+    if (m2[tapId].number - this.data.curNumber == 1) {
+      m2[tapId].taped = true;
+      this.setData(
+        {
+          matrix: m2,
+        }
+      )
+      this.data.curNumber++;
+      if (this.data.curNumber == m2.length) {
+        this.setData(
+          {
+            matrix: m2,
+            win: true,
+            timePassed: ((Date.now() - this.data.startTime)/1000).toFixed(1) + " 秒"
+          }
+        )
+      }
+    }
+  },
+  newRound: function() {
     this.setData({
-      taped : "buttonTaped"
+      matrix: app.newMatrix(25),
+      curNumber: 0,
+      startTime: Date.now(),
+      timePassed: "0 秒",
+      win: false
     })
-    console.log({length:5})
   }
 })
