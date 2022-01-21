@@ -15,7 +15,6 @@ App({
             return grid;
         }
         var arr = [];
-        len = 25;
         arr = Array.from({ length: len }, (v, i) => newGrid(i));
         arr = shuffleArray(arr);
         return arr;

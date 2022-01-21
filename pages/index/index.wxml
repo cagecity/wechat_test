@@ -1,10 +1,12 @@
-<view style="display:flex; justify-content:center">
-    <view id="matrix">
-        <block wx:for="{{matrix}}" wx:for-index="idx" wx:for-item="itm">
-            <button class="grid {{itm.taped?'taped':''}}" id="{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+<view style="display:flex; justify-content:center;">
+    <view class="matrix sideTop">
+        <block wx:for="{{matrix1}}" wx:for-index="idx" wx:for-item="itm">
+            <button class="grid {{itm.taped?'taped':''}}" id="1-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
         </block>
     </view>
-</view>
-<view id="result" wx:if="{{win}}">
-    <button bindtap="newRound">{{timePassed}}</button>
+    <view class="matrix sideBottom">
+        <block wx:for="{{matrix2}}" wx:for-index="idx" wx:for-item="itm">
+            <button class="grid {{itm.taped?'taped':''}}" id="2-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+        </block>
+    </view>
 </view>

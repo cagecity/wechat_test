@@ -1,32 +1,40 @@
 page {
   background: #2E94B9;
 }
-#matrix {
-  position:fixed;
-  top: 10vw;
-  width: 95vw;
-  border:1px solid black !important;
-  display:flex;
-  flex-wrap:wrap;
+
+.matrix {
+  width: 40vh;
+  border: 1px solid black !important;
+
 }
-#result {
-  position: fixed;
-  bottom: 10vw;
-  display: flex;
-  width: 95vw;
-  justify-content: center;
-}
+
 .grid {
-  width: 19vw !important;
-  height: 19vw !important;
+  width: 8vh !important;
+  height: 8vh !important;
   margin: 0;
   padding: 0;
-  font-size: 7vw;
-  line-height: 19vw;
-  border:1px solid black!important;
-  border-radius:0 !important;
+  font-size: 4vh;
+  line-height: 8vh;
+  border: 1px solid black !important;
+  border-radius: 0 !important;
   background-color: #F0E7C5;
 }
+
 .taped {
-background-color: #D25565;
+  background-color: #D25565;
+}
+
+.sideTop {
+  position: fixed;
+  top: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  transform: scale(-1, -1);
+}
+
+.sideBottom {
+  position: fixed;
+  bottom: 6vh;
+  display: flex;
+  flex-wrap: wrap;
 }
