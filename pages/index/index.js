@@ -12,11 +12,10 @@ Page({
     win1: false,
     win2: false
   },
+  
   onLoad: function () {
-    var m1Str = JSON.stringify(this.data.matrix);
-    var m1 = JSON.parse(m1Str);
-    var m2Str = JSON.stringify(this.data.matrix);
-    var m2 = JSON.parse(m2Str);
+    var m1 = JSON.parse(JSON.stringify(this.data.matrix));
+    var m2 = JSON.parse(JSON.stringify(this.data.matrix));
      this.setData(
       {
         matrix1: m1,
@@ -25,6 +24,7 @@ Page({
     )
 
   },
+
   gridTap: function (e) {
     var tapMatrix = e.target.id.split("-");
     var matrixId = tapMatrix[0];
@@ -33,7 +33,9 @@ Page({
     var winName = "win" + matrixId;
     var timePassedName = "timePassed" + matrixId;
     var gridId = tapMatrix[1];
+
     var m = this.data[matrixName];
+
     if (m[gridId].number - this.data[curNumberName] == 1) {
       m[gridId].taped = true;
       this.setData(
@@ -53,14 +55,5 @@ Page({
         )
       }
     }
-  },
-  newRound: function () {
-    this.setData({
-      matrix: app.newMatrix(25),
-      curNumber: 0,
-      startTime: Date.now(),
-      timePassed: "0 秒",
-      win: false
-    })
   }
 })
