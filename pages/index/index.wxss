@@ -3,18 +3,29 @@ page {
 }
 
 .matrix {
-  width: 40vh;
+  width: 36vh;
   border: 1px solid black !important;
 
 }
 
+.middle {
+  width:36vh;
+  position: fixed;
+  top: 47vh;
+  display: flex;
+  justify-content: center;
+}
+
+.startButton {
+}
+
 .grid {
-  width: 8vh !important;
-  height: 8vh !important;
+  width: 7.2vh !important;
+  height: 7.2vh !important;
   margin: 0;
   padding: 0;
-  font-size: 4vh;
-  line-height: 8vh;
+  font-size: 3.6vh;
+  line-height: 7.2vh;
   border: 1px solid black !important;
   border-radius: 0 !important;
   background-color: #F0E7C5;

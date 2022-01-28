@@ -4,6 +4,9 @@
             <button class="grid {{itm.taped?'taped':''}}" id="1-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
         </block>
     </view>
+    <view class="middle">
+        <button>hahahahha</button>
+    </view>
     <view class="matrix sideBottom">
         <block wx:for="{{matrix2}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
             <button class="grid {{itm.taped?'taped':''}}" id="2-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
