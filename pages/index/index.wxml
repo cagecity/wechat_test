@@ -5,7 +5,7 @@
         </block>
     </view>
     <view class="middle">
-        <button>hahahahha</button>
+        <button class="startButton">hahahahha</button>
     </view>
     <view class="matrix sideBottom">
         <block wx:for="{{matrix2}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
