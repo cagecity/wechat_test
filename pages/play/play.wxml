@@ -1,15 +1,13 @@
 <view style="display:flex; justify-content:center;">
     <view class="matrix sideTop">
         <block wx:for="{{matrix1}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
-            <button class="grid {{itm.taped?'taped':''}}" id="1-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+            <button class="grid gridTop {{itm.taped?'taped':''}}" id="1-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
         </block>
     </view>
-    <view class="middle">
-        <button class="startButton">hahahahha</button>
-    </view>
+
     <view class="matrix sideBottom">
         <block wx:for="{{matrix2}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
-            <button class="grid {{itm.taped?'taped':''}}" id="2-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+            <button class="grid gridBottom {{itm.taped?'taped':''}}" id="2-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
         </block>
     </view>
 </view>

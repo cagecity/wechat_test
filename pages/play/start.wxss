@@ -1,0 +1,30 @@
+page {
+  background: #F9F1DB;
+}
+
+.middle {
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startButton {
+  height: 8vh !important;
+  font-size:3vh !important;
+  line-height: 5vh !important;
+  background-color: #DD3B44;
+  border-radius: 5vh !important;
+}
+
+.shake {
+  animation: shake 800ms ease-in-out; 
+}
+@keyframes shake {
+  10%, 90% {transform: translate3d(-1px,0,0);}
+  20%, 80% {transform: translate3d(+2px,0,0);}
+  30%, 70% {transform: translate3d(-4px,0,0);}
+  40%, 60% {transform: translate3d(+4px,0,0);}
+  50% {transform: translate3d(-4px,0,0);}
+}

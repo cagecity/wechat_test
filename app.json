@@ -1,6 +1,8 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/play/start",
+    "pages/play/countdown",
+    "pages/play/play"
   ],
   "window":{
     "backgroundTextStyle":"light",

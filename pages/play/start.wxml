@@ -1,0 +1,4 @@
+<view class="middle">
+<button class="startButton shake" bindtap="play">
+</button>
+</view>

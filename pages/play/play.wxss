@@ -1,21 +1,14 @@
 page {
-  background: #2E94B9;
+  background: #F9F1DB;
 }
 
 .matrix {
   width: 36vh;
-  border: 1px solid black !important;
+  border: 1px solid F0F0F0 !important;
 
 }
 
-.middle {
-  width:36vh;
-  height:12vh;
-  position: fixed;
-  top: 47vh;
-  display: flex;
-  justify-content: center;
-}
+
 
 .startButton {
   height: 6vh !important;
@@ -30,9 +23,16 @@ page {
   padding: 0;
   font-size: 3.6vh;
   line-height: 7.2vh;
-  border: 1px solid black !important;
+  border: 1px solid #F0F0F0 !important;
   border-radius: 0 !important;
-  background-color: #F0E7C5;
+}
+
+.gridTop {
+  background-color: #99d6b9;
+}
+
+.gridBottom {
+  background-color: #73b9d4;
 }
 
 .taped {
