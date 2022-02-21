@@ -1,1 +1,88 @@
-/* pages/play/countdown.wxss */
+page {
+    background: #F9F1DB;
+    display: flex;
+    justify-content: center;
+}
+  
+.lights {
+  width: 75vw;
+  height:90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gap {
+  width: 20w;
+  height: 20vw;
+}
+
+.redLight {
+  width: 20vw;
+  height:20vw;
+  background-color: #DD3B44;
+  border-radius: 50%;
+}
+.redLightMask {
+  width: 20vw;
+  height:20vw;
+  background-color: #808080;
+  opacity: 90%;
+  border-radius: 50%;
+  animation: 1s redOn;
+}
+
+@keyframes redOn{
+  0%{opacity: 0;}
+  25%{opacity: 0;}
+  40%{opacity: 0%;}
+  50%{opacity: 90%;}
+  100%{opacity: 90%;}
+}
+
+.yellowLight {
+  width: 20vw;
+  height:20vw;
+  background-color: #FCC307;
+  border-radius: 50%;
+}
+.yellowLightMask {
+  width: 20vw;
+  height:20vw;
+  background-color: #808080;
+  opacity: 90%;
+  border-radius: 50%;
+  animation: 1s yellowOn;
+}
+
+@keyframes yellowOn{
+  0%{opacity: 90%;}
+  40%{opacity: 90%;}
+  50%{opacity: 0%;}
+  70%{opacity: 0%;}
+  75%{opacity: 90%;}
+  100%{opacity: 90%;}
+}
+
+.greenLight {
+  width: 20vw;
+  height:20vw;
+  background-color: #41AE3C;
+  border-radius: 50%;
+}
+
+.greenLightMask {
+  width: 20vw;
+  height:20vw;
+  background-color: #808080;
+  opacity: 0%;
+  border-radius: 50%;
+  animation: 1s greenOn;
+}
+
+@keyframes greenOn{
+  0%{opacity: 90%;}
+  70%{opacity: 90%;}
+  75%{opacity: 0%;}
+  100%{opacity: 0%;}
+}

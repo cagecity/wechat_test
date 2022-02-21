@@ -1,4 +1,8 @@
 App({
+    globalData: {
+        starCountTop: 0,
+        starCountBottom: 0
+    },
     newMatrix(len) {
         function shuffleArray(arr) {
             var i = arr.length, t, j;

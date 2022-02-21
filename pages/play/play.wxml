@@ -1,13 +1,74 @@
 <view style="display:flex; justify-content:center;">
-    <view class="matrix sideTop">
-        <block wx:for="{{matrix1}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
-            <button class="grid gridTop {{itm.taped?'taped':''}}" id="1-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+    <view class="matrix matrixTop">
+        <block wx:for="{{matrixDataTop}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
+            <button class="grid gridTop {{itm.taped?'taped':''}}" id="Top-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
         </block>
     </view>
 
-    <view class="matrix sideBottom">
-        <block wx:for="{{matrix2}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
-            <button class="grid gridBottom {{itm.taped?'taped':''}}" id="2-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+    <view class="star starTop">
+        <block>
+            <image class="iconTop" src="/images/kid.png" mode="widthFix"></image>
+        </block>
+        <block wx:for="{{starTop}}">
+            <image class="starImage" src="/images/star.png"></image>
+        </block>        
+    </view>
+
+    <view class="star starBottom">
+        <block>
+            <image class="iconBottom" src="/images/parent.png" mode="widthFix"></image>
+        </block>
+        <block wx:for="{{starBottom}}">
+            <image class="starImage" src="/images/star.png"></image>
+        </block>
+    </view>
+
+    <view class="matrix matrixBottom">
+        <block wx:for="{{matrixDataBottom}}" wx:for-index="idx" wx:for-item="itm" wx:key="number">
+            <button class="grid gridBottom {{itm.taped?'taped':''}}" id="Bottom-{{idx}}" bindtap="gridTap">{{itm.number}}</button>
+        </block>
+    </view>
+
+    <view class="result" wx:if="{{finish}}">
+        <block wx:if="{{winner == 'Top'}}">
+            <view class="resultStarTop">
+                <text>恭喜你！</text>
+            </view>
+            <view class="resultTop">
+                <text>\\\ {{timeUsed}} //</text>
+            </view>
+        </block>
+
+        <block wx:else>
+            <view class="resultStarTop">
+                <text>还差几格</text>
+            </view>
+            <view class="resultTop">
+                <text>// {{timeUsed}} \\\</text>
+            </view>
+        </block>
+
+
+        <view class="replay">
+            <button class="replayButton" bind:tap="countdown"></button>
+        </view>
+
+        <block wx:if="{{winner == 'Bottom'}}">
+            <view class="resultBottom">
+                <text>\\\ {{timeUsed}} //</text>
+            </view>
+            <view class="resultStarBottom">
+                <text>恭喜你！</text>
+            </view>
+        </block>
+
+        <block wx:else>
+            <view class="resultBottom">
+                <text>// {{timeUsed}} \\\</text>
+            </view>
+            <view class="resultStarBottom">
+                <text>还差几格</text>
+            </view>
         </block>
     </view>
 </view>

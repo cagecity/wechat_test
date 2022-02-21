@@ -4,17 +4,96 @@ page {
 
 .matrix {
   width: 36vh;
-  border: 1px solid F0F0F0 !important;
-
 }
 
+.matrixTop {
+  position: fixed;
+  top: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  transform: scale(-1, -1);
+}
 
+.matrixBottom {
+  position: fixed;
+  top: 58vh;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.startButton {
-  height: 6vh !important;
+.result {
+  width: 90vw;
+  height: 90vw;
+  border-radius: 50%;
+  background-color: #1A1A1A;
+  opacity: 95%;
+  position:fixed;
+  top:calc(50vh - 45vw);
+}
+
+.resultStarTop {
+  width:90vw;
+  height:15vw;
+  color:#F0F0F0;
+  display: flex;
+  justify-content: center;
+  transform: scale(-1, -1);
+  position:fixed;
+  top:calc(50vh - 45vw);
+}
+
+.resultTop {
+  width:90vw;
+  height:20vw;
+  color:#F0F0F0;
+  display: flex;
+  justify-content: center;
+  transform: scale(-1, -1);
+  position:fixed;
+  top:calc(50vh - 30vw);
+  font-size: 10vw;
+}
+
+.replay {
+  width:90vw;
+  height:20vw;
+  color:#F0F0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  top:calc(50vh - 10vw);
+}
+
+.replayButton {
+  height: 8vh !important;
   font-size:3vh !important;
-  line-height: 2vh !important;
+  line-height: 5vh !important;
+  background-color: #DD3B44;
+  border-radius: 5vh !important;
 }
+
+.resultBottom {
+  width:90vw;
+  height:25vw;
+  color:#F0F0F0;
+  display: flex;
+  justify-content: center;
+  font-size: 10vw;
+  position:fixed;
+  top:calc(50vh + 10vw);
+}
+
+.resultStarBottom {
+  width:90vw;
+  height:15vw;
+  color:#F0F0F0;
+  display: flex;
+  justify-content: center;
+  position:fixed;
+  top:calc(50vh + 30vw);
+}
+
 
 .grid {
   width: 7.2vh !important;
@@ -23,8 +102,9 @@ page {
   padding: 0;
   font-size: 3.6vh;
   line-height: 7.2vh;
+  color:#201A1A;
   border: 1px solid #F0F0F0 !important;
-  border-radius: 0 !important;
+  border-radius: 4px !important;
 }
 
 .gridTop {
@@ -36,20 +116,45 @@ page {
 }
 
 .taped {
-  background-color: #D25565;
+  background-color: #FFC307;
 }
 
-.sideTop {
+.star {
+  height:7vh;
+  width:36vh;
+  padding-bottom: 1vh;
+}
+
+.starTop {
+  margin-bottom: 2vh;
   position: fixed;
-  top: 11vh;
+  top: 44vh;
   display: flex;
   flex-wrap: wrap;
   transform: scale(-1, -1);
+  align-items: flex-end;
 }
 
-.sideBottom {
+.starBottom {
+  padding-top: 3vh;
   position: fixed;
-  bottom: 5vh;
+  top: 51vh;
   display: flex;
   flex-wrap: wrap;
+}
+
+.starImage {
+  width: 5vw;
+  height:5vw;
+  padding-right:1vw;
+}
+
+.iconTop {
+  width: 6vw;
+  padding-right: 2vw;
+}
+
+.iconBottom {
+  width: 7.5vw;
+  padding-right: 2vw;
 }

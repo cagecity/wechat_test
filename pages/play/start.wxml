@@ -1,4 +1,10 @@
+<view class="top">
+<image class="topImage" src="/images/kid.png" mode="widthFix"></image>
+</view>
 <view class="middle">
-<button class="startButton shake" bindtap="play">
-</button>
+  <button class="startButton shake" bind:tap="countdown">
+  </button>
+</view>
+<view class="bottom">
+<image class="bottomImage" src="/images/parent.png" mode="widthFix"></image>
 </view>

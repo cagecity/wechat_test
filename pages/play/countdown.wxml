@@ -1,2 +1,14 @@
-<!--pages/play/countdown.wxml-->
-<text>pages/play/countdown.wxml</text>
+<view class="lights">
+    <view class="redLight">
+        <view class="redLightMask">
+        </view>
+    </view>
+    <view class="yellowLight">
+        <view class="yellowLightMask">
+        </view>
+    </view>
+    <view class="greenLight">
+        <view class="greenLightMask" bind:animationend="play">
+        </view>
+    </view>
+</view>

@@ -2,36 +2,52 @@ const app = getApp();
 Page({
   data: {
     matrix: app.newMatrix(25),
-    matrix1: [],
-    matrix2: [],
-    curNumber1: 0,
-    curNumber2: 0,
+    matrixDataTop: [],
+    matrixDataBottom: [],
+    curNumberTop: 0,
+    curNumberBottom: 0,
     startTime: Date.now(),
-    timePassed1: "0秒",
-    timePassed2: "0秒",
-    win1: false,
-    win2: false
+    finish: false,
+    winner: '',
+    timeUsed: '',
+    starTop: 0,
+    starBottom: 0
   },
   
   onLoad: function () {
-    var m1 = JSON.parse(JSON.stringify(this.data.matrix));
-    var m2 = JSON.parse(JSON.stringify(this.data.matrix));
+    var mTop= JSON.parse(JSON.stringify(this.data.matrix));
+    var mBottom = JSON.parse(JSON.stringify(this.data.matrix));
      this.setData(
       {
-        matrix1: m1,
-        matrix2: m2
+        matrixDataTop: mTop,
+        matrixDataBottom: mBottom,
+        starTop: app.globalData.starCountTop,
+        starBottom: app.globalData.starCountBottom
       }
     )
 
   },
 
+  showWinner: function (winnerSide) {
+    var timePassed =  ((Date.now() - this.data.startTime) / 1000).toFixed(2);
+    var starName = "starCount" + winnerSide;
+    app.globalData.[starName] += 1;
+    this.setData(
+      {
+        finish: true,
+        winner: winnerSide,
+        timeUsed: timePassed,
+        starTop: app.globalData.starCountTop,
+        starBottom: app.globalData.starCountBottom
+      }
+    )
+  },
+
   gridTap: function (e) {
     var tapMatrix = e.target.id.split("-");
-    var matrixId = tapMatrix[0];
-    var matrixName = "matrix" + matrixId;
-    var curNumberName = "curNumber" + matrixId;
-    var winName = "win" + matrixId;
-    var timePassedName = "timePassed" + matrixId;
+    var matrixSide = tapMatrix[0];
+    var matrixName = "matrixData" + matrixSide;
+    var curNumberName = "curNumber" + matrixSide;
     var gridId = tapMatrix[1];
 
     var m = this.data[matrixName];
@@ -45,15 +61,14 @@ Page({
       )
 
       this.data[curNumberName]++;
-      if (this.data[curNumberName] == this.data.matrix1.length) {
-        this.setData(
-          {
-            [matrixName] : m,
-            [winName]: true,
-            [timePassedName]: ((Date.now() - this.data.startTime) / 1000).toFixed(1) + " 秒"
-          }
-        )
-      }
+      if (this.data[curNumberName] == this.data.matrixDataTop.length) {
+        this.showWinner(matrixSide);
+     }
     }
+  },
+  countdown: function(e) {
+    wx.navigateTo({
+      url: 'countdown'
+    })
   }
 })
